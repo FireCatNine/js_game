@@ -1,24 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+html {
+    overflow: hidden;
+    user-select: none;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: black;
     color: white;
+    margin: 0;
 }
 
 button {
-    background-color: black;
+    background-color: transparent;
     color: white;
     border: 1px solid white;
     border-radius: 10px;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     padding: 10px;
-    font-size: 1,8rem;
+    font-size: 1.8rem;
     font-weight: 500;
     margin: 10px;
     cursor: pointer;
 }
 
-spielfeld {
-    
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgb(6, 6, 6);
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.singleplayer {
+    margin-right: 10rem;
+    transition: background-color 0.2s ease;
+    transition: color 0.2s ease;
+    transition: box-shadow 0.2s ease;
+}
+
+.multiplayer {
+    margin-left: 10rem;
+    transition: background-color 0.2s ease;
+    transition: color 0.2s ease;
+    transition: box-shadow 0.2s ease;
+}
+
+.singleplayer:hover {
+    box-shadow: 0 0 100px rgb(255, 153, 0, 0.3);
+    border: 1px solid rgb(111, 63, 1);
+    color: rgb(255, 132, 0);
+}
+
+.multiplayer:hover {
+    box-shadow: 0 0 100px rgb(0, 151, 246, 0.3);
+    border: 1px solid rgb(7, 72, 112);
+    color: rgb(56, 152, 255);
 }
