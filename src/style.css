@@ -16,4 +16,9 @@ button {
     font-size: 1,8rem;
     font-weight: 500;
     margin: 10px;
+    cursor: pointer;
+}
+
+spielfeld {
+    
 }
