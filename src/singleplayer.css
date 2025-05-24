@@ -1,20 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-html {
-    overflow: hidden;
-    user-select: none;
+.spielfelder {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 20px;
+    margin-top: 10vh;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
+.grid {
+    display: grid;
+    height: fit-content;
+    width: fit-content;
+    grid-template-columns: repeat(8, var(--zellengr));
+    grid-template-rows: repeat(8, var(--zellengr));
+    background-color: rgb(12, 12, 12);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.cell {
+    width: var(--zellengr);
+    height: var(--zellengr);
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.cell:hover {
+    background-color: white;
+    border: 4px solid rgb(255, 128, 0);
+    z-index: 10;
+    transform: translate(-2px, -2px);
+    border-radius: 4px;
+}
+
+#gegner div.cell.stop {
+    pointer-events: none;
+}
+
+button {
+    width: 7rem;
+}
+
+.settings, .diff {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.settings input, .diff input {
     background-color: black;
+    border: 1px solid white;
     color: white;
-    margin: 0;
+    border-radius: 8px;
+    height: 50px;
+    width: 100px;
+    margin: 1.5rem;
 }
 
-header {
-    text-align: center;
-    padding: 2rem;
-    background-color: rgb(6, 6, 6);
-    font-size: 20px;
+.settings input:focus {
+    background-color: white;
+    color: black;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
