@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="dark" data-theme="dark">
     <script type="module" src="script.js"></script>
     <header>
-        <h1>Schiffe Versenken</h1>
+        <h1><a href="index.html">Schiffe Versenken</a></h1>
+        <button id="themeToggle" class="themeToggle"><img src="./assets/icons/moon.svg" alt="Icon" id="themeIcon" height="50px"></button>
     </header>
     <div class="main">
         <div class="buttons">
@@ -18,5 +19,6 @@
         <button class="multiplayer" onclick="location.href='multiplayer.html'">Multiplayer</button>
         </div>
     </div>
+    <div id="popup" class="popup"></div>
 </body>  
 </html>

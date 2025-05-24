@@ -12,23 +12,24 @@
     width: fit-content;
     grid-template-columns: repeat(8, var(--zellengr));
     grid-template-rows: repeat(8, var(--zellengr));
-    background-color: rgb(12, 12, 12);
+    background-color: var(--header-color);
     padding: 1rem;
     border-radius: 1rem;
+    gap: 1px;
 }
 
 .cell {
     width: var(--zellengr);
     height: var(--zellengr);
-    border: 1px solid white;
+    border: 1px solid var(--color);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
 .cell:hover {
-    background-color: white;
-    border: 4px solid rgb(255, 128, 0);
+    background-color: var(--background-color);
+    border: 4px solid var(--s-color);
     z-index: 10;
     transform: translate(-2px, -2px);
     border-radius: 4px;
@@ -38,10 +39,6 @@
     pointer-events: none;
 }
 
-button {
-    width: 7rem;
-}
-
 .settings, .diff {
     display: flex;
     flex-direction: column;
@@ -49,21 +46,44 @@ button {
 }
 
 .settings input, .diff input {
-    background-color: black;
-    border: 1px solid white;
-    color: white;
+    background-color: var(--background-color);
+    border: 1px solid var(--color);
+    color: var(--color);
     border-radius: 8px;
     height: 50px;
-    width: 100px;
+    width: 200px;
     margin: 1.5rem;
+    text-align: center;
+    font-size: 1rem;
 }
 
 .settings input:focus {
-    background-color: white;
-    color: black;
+    background-color: var(--color);
+    color: var(--background-color);
+}
+
+.settings input::placeholder {
+    color: var(--color);
+    text-align: center;
+}
+
+.settings input:focus::placeholder {
+    color: var(--header-color);
 }
 
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+button {
+    font-size: 1rem;
+    width: 200px;
+    height: 50px;
+    margin: 1.5rem;
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none; 
 }

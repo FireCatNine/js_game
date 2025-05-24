@@ -26,13 +26,13 @@
 }
 
 .singleplayer:hover {
-    box-shadow: 0 0 100px rgb(255, 153, 0, 0.3);
-    border: 1px solid rgb(111, 63, 1);
-    color: rgb(255, 132, 0);
+    box-shadow: 0 0 100px var(--s-box-shadow-color);
+    border: 1px solid var(--s-border-color);
+    color: var(--s-color);
 }
 
 .multiplayer:hover {
-    box-shadow: 0 0 100px rgb(0, 151, 246, 0.3);
-    border: 1px solid rgb(7, 72, 112);
-    color: rgb(56, 152, 255);
+    box-shadow: 0 0 100px var(--m-box-shadow-color);
+    border: 1px solid var(--m-border-color);
+    color: var(--m-color);
 }

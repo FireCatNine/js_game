@@ -4,6 +4,34 @@
     --zellengr: 60px;
 }
 
+.dark {
+    --header-color: rgb(12, 12, 12);
+    --background-color: black;
+    --color: white;
+
+    --s-box-shadow-color: rgb(255, 153, 0, 0.3);
+    --s-border-color: rgb(111, 63, 1);
+    --s-color: rgb(255, 132, 0);
+
+    --m-box-shadow-color: rgb(0, 151, 246, 0.3);
+    --m-border-color: rgb(7, 72, 112);
+    --m-color: rgb(56, 152, 255);
+}
+
+.light {
+    --header-color: rgb(224, 224, 224);
+    --background-color: white;
+    --color: black;
+
+    --s-box-shadow-color: rgb(255, 153, 0);
+    --s-border-color: rgb(216, 122, 0);
+    --s-color: rgb(255, 157, 0);
+
+    --m-box-shadow-color: rgb(0, 151, 246);
+    --m-border-color: rgb(0, 122, 198);
+    --m-color: rgb(0, 123, 255);
+}
+
 html {
     user-select: none;
     overflow: hidden;
@@ -11,22 +39,39 @@ html {
 
 body {
     font-family: "Inter", sans-serif;
-    background-color: black;
-    color: white;
+    background-color: var(--background-color);
+    color: var(--color);
     margin: 0;
 }
 
 header {
-    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 60px;
     padding: 3vh;
-    background-color: rgb(12, 12, 12);
+    background-color: var(--header-color);
     font-size: 20px;
+}
+
+header h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+header button {
+    border: none;
+    padding: 0;
+    margin-right: 2rem;
+    width: fit-content;
 }
 
 button {
     background-color: transparent;
-    color: white;
-    border: 1px solid white;
+    color: var(--color);
+    border: 1px solid var(--color);
     border-radius: 10px;
     font-family: "Inter", sans-serif;
     padding: 10px;
@@ -38,4 +83,29 @@ button {
 
 input {
     font-family: "Inter", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.popup {
+    position: fixed;
+    bottom: -30vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background: red;
+    color: var(--color);
+    width: 200px;
+    padding: 1.6rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    z-index: 100;
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+.popup-shown {
+    transform: translate(-50%, -33vh);
 }
